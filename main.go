@@ -51,7 +51,6 @@ func main() {
 		},
 		MaxAge: 12 * time.Hour,
 	}))
-	router.Static("/api/v1/images/products", "./images/products")
 	api := router.Group("/api/v1")
 
 	// API FOR USERS Authentication
