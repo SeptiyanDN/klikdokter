@@ -1,0 +1,1373 @@
+{
+	"info": {
+		"_postman_id": "c48cb94d-1d01-4a13-8ebd-d57ea55b9490",
+		"name": "Klik Dokter - Kable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19183216"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Registrasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "business.septiyan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "klikdokter",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Registrasi",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "business.septiyan@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "klikdokter",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:00:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Account Has Been Created\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": {\n        \"id\": 13,\n        \"email\": \"business.septiyan@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0\",\n        \"created_at\": \"2022-06-10T18:00:20.9762908+07:00\",\n        \"updated_at\": \"2022-06-10T18:00:20.9762908+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Failed Registrasi - Existed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "business.septiyan@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "klikdokter",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:00:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Email Sudah Pernah Terdaftar\",\n        \"code\": 400,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "business.septiyan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "klikdokter",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "business.septiyan@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "klikdokter",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:01:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Login Successfully\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0\"\n    }\n}"
+						},
+						{
+							"name": "Failed Login - Wrong Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "business.septiyan@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "klikdokter1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:02:16 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Login Failed\",\n        \"code\": 422,\n        \"status\": \"error\"\n    },\n    \"data\": {\n        \"error\": \"crypto/bcrypt: hashedPassword is not the hash of the given password\"\n    }\n}"
+						},
+						{
+							"name": "Failed Login - Email Not Registered",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "business.septiyan1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "klikdokter",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:03:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Login Failed\",\n        \"code\": 422,\n        \"status\": \"error\"\n    },\n    \"data\": {\n        \"error\": \"User Not Found on the Database\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "OBT-002",
+									"type": "text"
+								},
+								{
+									"key": "product_name",
+									"value": "Bodrexin",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "120",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "120000",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "carton",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/v1/item/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Failed - Unauthorized Access",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMX0.QHQUu2TJBJeolKGWmBaGEqGRD_eTvU8zSn9mVhUJ_AI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-001",
+											"type": "text"
+										},
+										{
+											"key": "product_name",
+											"value": "Tolak Angin JRG",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "120",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "120000",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "carton",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"add"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:04:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Unauthorized Access\",\n        \"code\": 401,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						},
+						{
+							"name": "Success Add Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-001",
+											"type": "text"
+										},
+										{
+											"key": "product_name",
+											"value": "Tolak Angin JRG",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "120",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "120000",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "carton",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:05:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Create Product Success\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": {\n        \"id\": 8,\n        \"sku\": \"OBT-001\",\n        \"product_name\": \"Tolak Angin JRG\",\n        \"qty\": 120,\n        \"price\": 120000,\n        \"unit\": \"carton\",\n        \"status\": 1,\n        \"created_at\": \"0001-01-01T00:00:00Z\",\n        \"updated_at\": \"0001-01-01T00:00:00Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3500/api/v1/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success - Get List Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3500/api/v1/items",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:05:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "452"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Get All Product Success\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": [\n        {\n            \"id\": 8,\n            \"sku\": \"OBT-001\",\n            \"product_name\": \"Tolak Angin JRG\",\n            \"qty\": 120,\n            \"price\": 120000,\n            \"unit\": \"carton\",\n            \"status\": 1,\n            \"created_at\": \"2022-06-10T18:05:09+07:00\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": 9,\n            \"sku\": \"OBT-002\",\n            \"product_name\": \"Bodrexin\",\n            \"qty\": 120,\n            \"price\": 120000,\n            \"unit\": \"carton\",\n            \"status\": 1,\n            \"created_at\": \"2022-06-10T18:05:42+07:00\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List Product BY SKU",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_01",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "OBT-002",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/v1/item/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success - Get List Product BY SKU",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"search"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:06:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Get Product By SKU Success\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": {\n        \"id\": 8,\n        \"sku\": \"OBT-001\",\n        \"product_name\": \"Tolak Angin JRG\",\n        \"qty\": 120,\n        \"price\": 120000,\n        \"unit\": \"carton\",\n        \"status\": 1,\n        \"created_at\": \"2022-06-10T18:05:09+07:00\",\n        \"updated_at\": \"0001-01-01T00:00:00Z\"\n    }\n}"
+						},
+						{
+							"name": "Failed - SKU Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-010",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"search"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:08:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "110"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Get Product By SKU Failed! SKU Tidak di temukan\",\n        \"code\": 400,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						},
+						{
+							"name": "Failed - Unauthorized Access",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_01",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-002",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"search"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:13:27 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Unauthorized Access\",\n        \"code\": 401,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_01",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "OBT-002",
+									"type": "text"
+								},
+								{
+									"key": "product_name",
+									"value": "Paramex Obat Batuk",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "cartoon",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/v1/item/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Failed - SKU Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-010",
+											"type": "text"
+										},
+										{
+											"key": "product_name",
+											"value": "OBT -Sehat2222222",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "cartoon",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"update"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:09:27 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "106"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Update Product Failed! SKU Tidak di temukan\",\n        \"code\": 400,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						},
+						{
+							"name": "Success - Update Products",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-002",
+											"type": "text"
+										},
+										{
+											"key": "product_name",
+											"value": "Paramex Obat Batuk",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "cartoon",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:10:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Update Product Success\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": {\n        \"ID\": 9,\n        \"Sku\": \"OBT-002\",\n        \"Product_name\": \"Paramex Obat Batuk\",\n        \"Qty\": 12,\n        \"Price\": 5000,\n        \"Unit\": \"cartoon\",\n        \"Status\": 1,\n        \"Created_at\": \"2022-06-10T18:05:42+07:00\",\n        \"Updated_at\": \"2022-06-10T18:10:08+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Failed - Unauthorized Access",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_01",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-002",
+											"type": "text"
+										},
+										{
+											"key": "product_name",
+											"value": "Paramex Obat Batuk",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "cartoon",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"update"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:13:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Unauthorized Access\",\n        \"code\": 401,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_01",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "OBT-002",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3500/api/v1/item/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3500",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"remove"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success - Remove Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-002",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/remove",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"remove"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:11:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Remove Product Success\",\n        \"code\": 200,\n        \"status\": \"success\"\n    },\n    \"data\": {\n        \"ID\": 9,\n        \"Sku\": \"OBT-002\",\n        \"Product_name\": \"Paramex Obat Batuk\",\n        \"Qty\": 12,\n        \"Price\": 5000,\n        \"Unit\": \"cartoon\",\n        \"Status\": 1,\n        \"Created_at\": \"2022-06-10T18:05:42+07:00\",\n        \"Updated_at\": \"2022-06-10T18:10:08+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Failed - SKU Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-002",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/remove",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"remove"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:11:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "106"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Remove Product Failed! SKU Tidak di temukan\",\n        \"code\": 400,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						},
+						{
+							"name": "Failed - Unauthorized Access",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxM30.FUKjsjbmlBzHTCqPXc1C57jncF0w-6a0ND-bKlos7_01",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sku",
+											"value": "OBT-002",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3500/api/v1/item/remove",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"item",
+										"remove"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 11:12:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"Unauthorized Access\",\n        \"code\": 401,\n        \"status\": \"error\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
